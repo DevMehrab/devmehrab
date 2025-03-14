@@ -9,7 +9,7 @@ import { Footer } from "./Footer";
 
 function App() {
   return (
-    <div className="bg-zinc-900 overflow-hidden">
+    <div className="bg-zinc-900 overflow-x-hidden">
       <Hero />
       <Skills />
       <Projects/>
