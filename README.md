@@ -2,7 +2,7 @@
 
 💻 **Web Developer | React Enthusiast | Tech Explorer**  
 
--  **Skills:** JavaScript, React, Bootstrap, Git  
+-  **Skills:** JavaScript, React, Bootstrap, Tailwind, Git
 -  **Interests:** Web Development, AI, Productivity Tools  
 -  **Projects:** Building web apps & digital products  
 
