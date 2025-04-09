@@ -6,6 +6,6 @@
 -  **Interests:** Web Development, AI, Productivity Tools  
 -  **Projects:** Building web apps & digital products  
 
- **Reach me on [LinkedIn](https://www.linkedin.com/in/dev-mehrab/)**  
-**![LinkedIn](https://img.icons8.com/?size=32&id=tvG-nQ3s2hZL&format=png)**
+![LinkedIn](https://img.icons8.com/?size=32&id=tvG-nQ3s2hZL&format=png) **Reach me on [LinkedIn](https://www.linkedin.com/in/dev-mehrab/)**  
+
 ---
