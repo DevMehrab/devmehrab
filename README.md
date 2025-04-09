@@ -7,5 +7,5 @@
 -  **Projects:** Building web apps & digital products  
 
  **Reach me on [LinkedIn](https://www.linkedin.com/in/dev-mehrab/)**  
-**![LinkedIn](https://img.icons8.com/?size=96&id=xuvGCOXi8Wyg&format=png)**
+**![LinkedIn](https://img.icons8.com/?size=48&id=89242&format=png)**
 ---
