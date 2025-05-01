@@ -1,6 +1,6 @@
 ## Hi, I'm **Mehrab Hossain** 
 
-💻 **Web Developer | React Enthusiast | Tech Explorer**  
+💻 **Web Developer | React Enthusiast**  
 
 -  **Skills:** JavaScript, React, Bootstrap, Tailwind, Git
 -  **Interests:** Web Development, AI, Productivity Tools  
