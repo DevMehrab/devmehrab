@@ -8,6 +8,11 @@
 
 🌐 **Website: [devmehrab](https://devmehrab.vercel.app/)**
 
-📬 **Reach me on [LinkedIn](https://www.linkedin.com/in/dev-mehrab/)**  
+📬 **Social Links**  
+
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/dev.mehrabhossain)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/devmehrab)
+
+
 
 ---
