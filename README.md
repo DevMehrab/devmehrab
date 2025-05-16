@@ -6,7 +6,8 @@
 -  **Interests:** Web Development, AI, Productivity Tools  
 -  **Projects:** Building web apps & digital products  
 
-🌐 **Website: [![DevMehrab](https://img.shields.io/badge/DEV%20MEHRAB-7c86ff)](https://devmehrab.vercel.app)**
+🌐 **Website:**
+[![DevMehrab](https://img.shields.io/badge/DEV%20MEHRAB-7c86ff)](https://devmehrab.vercel.app)
 
 📬 **Social Links**  
 
