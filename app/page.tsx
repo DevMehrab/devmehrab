@@ -6,8 +6,7 @@ import OGImageTemplate from "@/components/ui/GlowingButton";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-24 sm:gap-32 pb-24">
-      {/* We add gap-24 to ensure consistent spacing between sections without manual margins */}
+    <div className="flex bg-[#0a0a0a] flex-col">
       <Hero />
       <About />
       <Projects />

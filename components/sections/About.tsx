@@ -67,11 +67,11 @@ export default function About() {
             <Reveal delay={0.3}>
               <div className="relative pl-6 sm:pl-8 border-l border-zinc-800/60 space-y-12">
                 {/* Glowing dot at the top of the timeline */}
-                <div className="absolute top-0 -left-[1px] w-[3px] h-24 bg-gradient-to-b from-cyan-500 to-transparent" />
+                <div className="absolute top-1 -left-[2px] w-[3px] h-24 bg-gradient-to-b from-cyan-500 to-transparent" />
 
                 {/* Experience Node */}
                 <div className="relative group">
-                  <div className="absolute -left-[35px] sm:-left-[43px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-cyan-500/50 transition-colors">
+                  <div className="absolute -left-[40px] sm:-left-[43px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-cyan-500/50 transition-colors">
                     <Briefcase className="w-4 h-4 text-cyan-400" />
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mb-2">
@@ -94,7 +94,7 @@ export default function About() {
 
                 {/* Education Node */}
                 <div className="relative group">
-                  <div className="absolute -left-[35px] sm:-left-[43px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-emerald-500/50 transition-colors">
+                  <div className="absolute -left-[40px] sm:-left-[43px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-emerald-500/50 transition-colors">
                     <GraduationCap className="w-4 h-4 text-emerald-400" />
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mb-2">

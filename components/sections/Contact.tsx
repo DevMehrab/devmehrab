@@ -57,7 +57,7 @@ export default function Contact() {
       className="relative py-32 w-full bg-zinc-950 overflow-hidden"
     >
       {/* Background Ambience */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/10 blur-[150px] rounded-t-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/1 blur-[150px] rounded-t-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row gap-12 lg:gap-20 relative z-10">
         {/* ================= LEFT: VERTICAL HEADER ================= */}
