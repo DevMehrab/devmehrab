@@ -103,7 +103,6 @@ export default function RootLayout({
         <main className="relative flex flex-col min-h-screen selection:bg-cyan-500/30 selection:text-white">
           {children}
         </main>
-
         <Footer />
       </body>
     </html>

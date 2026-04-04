@@ -172,7 +172,7 @@ export default function Contact() {
                           ? "Transmitting..."
                           : isSubmitted
                             ? "Payload Sent"
-                            : "Execute Ping"}
+                            : "Send"}
                         {isSubmitting ? (
                           <Loader2 className="w-4 h-4 animate-spin" />
                         ) : isSubmitted ? (
@@ -206,15 +206,14 @@ export default function Contact() {
                         Direct Route
                       </h4>
                       <p className="font-mono text-xs text-zinc-500">
-                        Bypass form submission
+                        #*&$@^$+%
                       </p>
                     </div>
                   </div>
 
                   <p className="text-zinc-400 text-sm leading-relaxed mb-8">
-                    Prefer to use your own email client? You can reach me
-                    directly at the address below. I monitor this inbox
-                    regularly.
+                    You can reach me directly at the address below. I monitor
+                    this inbox regularly.
                   </p>
 
                   <a

@@ -6,7 +6,7 @@ import { Menu, X, ArrowDownToLine, TerminalSquare, Github } from "lucide-react";
 
 const navLinks = [
   { name: "Background", href: "#about", num: "01" },
-  { name: "Deployments", href: "#projects", num: "02" },
+  { name: "Projects", href: "#projects", num: "02" },
   { name: "Network", href: "#contact", num: "03" },
 ];
 

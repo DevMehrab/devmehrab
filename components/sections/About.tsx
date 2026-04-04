@@ -71,7 +71,7 @@ export default function About() {
 
                 {/* Experience Node */}
                 <div className="relative group">
-                  <div className="absolute -left-[40px] sm:-left-[43px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-cyan-500/50 transition-colors">
+                  <div className="absolute -left-[40px] sm:-left-[48px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-cyan-500/50 transition-colors">
                     <Briefcase className="w-4 h-4 text-cyan-400" />
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mb-2">
@@ -94,7 +94,7 @@ export default function About() {
 
                 {/* Education Node */}
                 <div className="relative group">
-                  <div className="absolute -left-[40px] sm:-left-[43px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-emerald-500/50 transition-colors">
+                  <div className="absolute -left-[40px] sm:-left-[48px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-emerald-500/50 transition-colors">
                     <GraduationCap className="w-4 h-4 text-emerald-400" />
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mb-2">

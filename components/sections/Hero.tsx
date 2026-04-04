@@ -9,18 +9,14 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col justify-center w-full overflow-hidden bg-zinc-950"
     >
-      {/* --- Modern Grid Background --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
-      {/* --- Ambient Glows --- */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-[-20%] w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-20 lg:pt-0">
-        {/* ================= LEFT COLUMN: TYPOGRAPHY ================= */}
         <div className="lg:col-span-7 flex flex-col items-start space-y-8">
           <Reveal delay={0.1}>
-            {/* Minimalist Status Badge */}
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -33,7 +29,6 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            {/* Massive Editorial Typography */}
             <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-bold tracking-tighter leading-[0.9]">
               <span className="block text-zinc-100">Mehrab</span>
               <span className="block bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 pb-2">
@@ -43,7 +38,6 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            {/* Crisp Subtitle */}
             <div className="pl-4 border-l-2 border-cyan-500/50 max-w-xl">
               <h2 className="text-xl sm:text-2xl font-medium text-zinc-300 mb-2">
                 Junior Full-Stack Developer
@@ -58,7 +52,6 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.4}>
-            {/* Modern Interactive Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="#projects"
@@ -72,21 +65,19 @@ export default function Hero() {
               </a>
 
               <a
-                href="#contact"
-                className="px-8 py-4 text-zinc-400 font-mono text-sm rounded-lg hover:text-cyan-400 hover:bg-zinc-900 transition-all"
+                href="/CV-Mehrab_Hossain.pdf" 
+                download="CV-Mehrab_Hossain.pdf" 
+                className="px-8 py-4 text-zinc-400 font-mono text-sm rounded-lg border border-zinc-800 hover:text-cyan-400 hover:bg-zinc-900 hover:border-cyan-400/30 transition-all inline-block"
               >
-                &lt;Contact Me /&gt;
+                &lt;Download CV /&gt;
               </a>
             </div>
           </Reveal>
         </div>
 
-        {/* ================= RIGHT COLUMN: VISUAL COMPONENT ================= */}
         <div className="lg:col-span-5 hidden lg:flex relative w-full h-full justify-end items-center">
           <Reveal delay={0.5}>
-            {/* Glassmorphic Tech Stack Card */}
             <div className="relative w-full max-w-md aspect-square rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl p-8 flex flex-col justify-between shadow-2xl overflow-hidden group">
-              {/* Card Inner Glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/20 blur-[50px] rounded-full group-hover:bg-cyan-400/30 transition-colors duration-500" />
 
               <div className="relative z-10 flex justify-between items-start">

@@ -10,7 +10,7 @@ const projects = [
       "A modern investor platform that makes equity accessible: buy fractional ownership via digital tokens, monitor your portfolio in real time, and participate in company growth with transparent, secure transactions.",
     tech: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Stripe"],
     live: "https://investment.digital-trading-platforms.com",
-    featured: true, // We will use this to span the first item
+    featured: false,
   },
   {
     title: "Atenier | E-Commerce",
@@ -26,6 +26,14 @@ const projects = [
       "A responsive website for a plumbing business featuring a modern design, mobile-friendly, service listings, and contact forms.",
     tech: ["Next.js", "Tailwind", "Shadcn/UI", "web3forms"],
     live: "https://presttplumbing.netlify.app/",
+    featured: false,
+  },
+  {
+    title: "Outreach AI",
+    description:
+      "A productivity-focused SaaS tool designed to automate and personalize cold outreach at scale using AI-driven message generation and bulk processing.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Gemini API"],
+    live: "https://outreach-ai-theta.vercel.app/",
     featured: false,
   },
 ];
@@ -47,7 +55,7 @@ export default function Projects() {
               <span className="text-cyan-500 font-mono text-sm">02.</span>
               <div className="h-[1px] w-12 lg:w-[1px] lg:h-24 bg-zinc-800" />
               <h2 className="text-3xl lg:text-4xl font-bold text-zinc-100 tracking-widest uppercase lg:-rotate-180 lg:[writing-mode:vertical-rl] whitespace-nowrap">
-                Deployments
+                Projects
               </h2>
             </div>
           </Reveal>
