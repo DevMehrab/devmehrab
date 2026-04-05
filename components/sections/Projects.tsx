@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Investor Portal",
     description:
-      "A modern investor platform that makes equity accessible: buy fractional ownership via digital tokens, monitor your portfolio in real time, and participate in company growth with transparent, secure transactions.",
+      "A modern investor platform that makes equity accessible: buy fractional ownership via digital tokens, monitor portfolio, and participate in company growth with transparent, secure transactions.",
     tech: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Stripe"],
     live: "https://investment.digital-trading-platforms.com",
     featured: false,
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Atenier | E-Commerce",
     description:
-      "A full-stack e-commerce website with a custom admin dashboard for inventory management and order processing.",
+      "A full-stack SEO optimised luxury e-commerce website with a custom admin dashboard for inventory management and order processing.",
     tech: ["Next.js", "TypeScript", "Tailwind", "MongoDB"],
     live: "https://atenier.com",
     featured: false,

@@ -97,12 +97,12 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button
+          <div
             className="md:hidden relative z-50 p-2 text-zinc-400 hover:text-cyan-400 transition-colors bg-zinc-900/50 border border-zinc-800/50 rounded-lg"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          </div>
         </div>
       </motion.nav>
 

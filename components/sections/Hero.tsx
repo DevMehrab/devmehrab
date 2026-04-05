@@ -9,7 +9,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col justify-center w-full overflow-hidden bg-zinc-950"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div> */}
 
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-[-20%] w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
@@ -65,8 +65,8 @@ export default function Hero() {
               </a>
 
               <a
-                href="/CV-Mehrab_Hossain.pdf" 
-                download="CV-Mehrab_Hossain.pdf" 
+                href="/CV-Mehrab_Hossain.pdf"
+                download="CV-Mehrab_Hossain.pdf"
                 className="px-8 py-4 text-zinc-400 font-mono text-sm rounded-lg border border-zinc-800 hover:text-cyan-400 hover:bg-zinc-900 hover:border-cyan-400/30 transition-all inline-block"
               >
                 &lt;Download CV /&gt;
