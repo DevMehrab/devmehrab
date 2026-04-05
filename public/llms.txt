@@ -1,0 +1,22 @@
+# Mehrab Hossain - Fullstack Developer & Next.js Expert
+> High-performance web applications, distributed systems, and modern UI/UX.
+
+## Critical Links
+- Portfolio: https://devmehrab.com
+- GitHub: https://github.com/DevMehrab
+- LinkedIn: https://linkedin.com/in/devmehrab
+- Facebook: https://www.facebook.com/dev.mehrabhossain
+
+## Tech Stack & Expertise
+- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion.
+- **Backend:** Node.js, MongoDB, Supabase.
+
+## Featured Projects
+### Atenier | E-commerce
+- **Description:** A full-stack SEO optimised luxury e-commerce website with a custom admin dashboard for inventory management and order processing.
+- **Tech:** Next.js, Tailwind.
+- **URL:** https://atenier.com
+- **Outcome:** SEO optimised and faster load time
+
+## How to reach me
+Available for high-impact development roles and specialized consulting. Email: dev.mehrabhossain@gmail.com

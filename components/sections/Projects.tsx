@@ -128,7 +128,7 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <div className="flex items-center gap-2 text-cyan-400 font-mono text-sm opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    <div className="md:flex items-center gap-2 text-cyan-400 hidden font-mono text-sm opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                       <span>View_Deployment</span>
                       <ArrowUpRight className="w-4 h-4" />
                     </div>

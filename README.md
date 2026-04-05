@@ -36,6 +36,6 @@ Git | Vercel | GitHub
 
 ### `>_ NETWORK_LINKS`
 
-- [🔗 Portfolio](https://devmehrab.vercel.app)
+- [🔗 Portfolio](https://devmehrab.com)
 - [💼 Connect_LinkedIn](https://linkedin.com/in/devmehrab)
 - [✉️ Mail_Me](mailto:dev.mehrabhossain@gmail.com)

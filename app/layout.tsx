@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // Added Viewport
 import { Outfit, Fira_Code } from "next/font/google";
 import "./globals.css";
 
@@ -19,90 +19,108 @@ const firaCode = Fira_Code({
   display: "swap",
 });
 
-// IMPORTANT: Replace with your actual deployed domain
-const siteUrl = "https://devmehrab.vercel.app";
+const siteUrl = "https://devmehrab.com";
+
+// Viewport is now a separate export in Next.js 14+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mehrab Hossain | Full-Stack Developer",
-    template: "%s | Mehrab Hossain", // Useful if you add separate pages later (e.g., "Blog | Mehrab Hossain")
+    default: "Mehrab Hossain | Best Next.js Developer in Dhaka", // Keyword in the main title
+    template: "%s | Mehrab Hossain",
   },
   description:
-    "Portfolio of Mehrab Hossain, a Junior Full-Stack Developer specializing in the MERN stack and Next.js. Currently building at iMS Technologies.",
+    "Mehrab Hossain (devmehrab) is a top-tier Full-Stack Developer in Dhaka, Bangladesh, specializing in Next.js, MERN stack, and high-performance web apps.",
   keywords: [
     "Mehrab Hossain",
-    "Full-Stack Developer",
-    "MERN Stack",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Bangladesh",
-    "Web Developer",
+    "devmehrab",
+    "Best Next.js Developer Dhaka",
+    "Full-Stack Developer Bangladesh",
+    "MERN Stack Expert",
+    "Next.js Dhaka",
   ],
+  alternates: {
+    canonical: siteUrl, // CRITICAL: Tells Google this is the "official" version
+  },
   authors: [{ name: "Mehrab Hossain", url: siteUrl }],
-  creator: "Mehrab Hossain",
-
-  // Open Graph (LinkedIn, Facebook, Discord, etc.)
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Mehrab Hossain | Full-Stack Developer",
-    description:
-      "Junior Full-Stack Developer specializing in the MERN stack and Next.js.",
+    title: "Mehrab Hossain | Full-Stack Developer Portfolio",
+    description: "Expert Next.js & MERN Stack Developer based in Dhaka.",
     siteName: "Mehrab Hossain Portfolio",
     images: [
-      {
-        url: "/og-image.png", // Points to public/og-image.png
-        width: 1200,
-        height: 630,
-        alt: "Mehrab Hossain - Full-Stack Developer Portfolio",
-      },
+      { url: "/og-image.png", width: 1794, height: 938, alt: "Mehrab Hossain" },
     ],
   },
-
-  // Twitter/X specific cards
   twitter: {
     card: "summary_large_image",
-    title: "Mehrab Hossain | Full-Stack Developer",
-    description:
-      "Junior Full-Stack Developer specializing in the MERN stack and Next.js.",
-    images: ["/og-image.png"], // Points to public/og-image.png
-    creator: "@yourtwitterhandle", // Update or remove this
-  },
-
-  // Tells search engines to crawl and index your site
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    title: "Mehrab Hossain | @devmehrab",
+    description: "Full-Stack Developer specializing in Next.js and MERN.",
+    images: ["/og-image.png"],
+    creator: "@devmehrab",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Mehrab Hossain",
+    alternateName: "devmehrab",
+    url: siteUrl,
+    image: `${siteUrl}/my-profile-photo.png`, // Link to your face photo
+    jobTitle: "Full-Stack Developer",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Dhaka",
+      addressCountry: "BD",
+    },
+    sameAs: [
+      "https://github.com/DevMehrab",
+      "https://linkedin.com/in/devmehrab",
+      "https://www.facebook.com/dev.mehrabhossain",
+      "https://twitter.com/devmehrab",
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "MERN Stack",
+      "SEO",
+    ],
+    description:
+      "The best Next.js developer in Dhaka, Bangladesh, building scalable web applications.",
+  };
+
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
         className={`${inter.variable} ${firaCode.variable} font-sans bg-[#0a0a0a] text-zinc-400 antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <CustomCursor />
         <SmoothScroll />
         <Navbar />
-
-        <main className="relative flex flex-col min-h-screen selection:bg-cyan-500/30 selection:text-white">
-          {children}
-        </main>
+        <main className="relative flex flex-col min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
