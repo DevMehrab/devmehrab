@@ -10,11 +10,14 @@ export default function Hero() {
       aria-label="Mehrab Hossain - Full-Stack Developer Hero Section"
       className="relative min-h-screen flex flex-col justify-center w-full overflow-hidden bg-zinc-950"
     >
+      {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-[-20%] w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-20 lg:pt-0">
-        <div className="lg:col-span-7 flex flex-col items-start space-y-8">
+      {/* Main Container: Switched from Grid to Flex Column Center */}
+      <div className="max-w-7xl mx-auto px-6 w-full z-10 flex flex-col items-center justify-center pt-20 lg:pt-0">
+        {/* Text Section: Centered items and text */}
+        <div className="flex flex-col items-center text-center space-y-8 max-w-4xl">
           {/* SEO Tactic 1: Semantic Badge */}
           <Reveal delay={0.1}>
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
@@ -23,7 +26,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
               </span>
               <span className="text-zinc-300 font-mono text-xs tracking-wide uppercase">
-                Software Engineer based in Dhaka, BD
+                Software Dev based in Dhaka
               </span>
             </div>
           </Reveal>
@@ -31,36 +34,31 @@ export default function Hero() {
           {/* SEO Tactic 2: Keyword-Rich H1 */}
           <Reveal delay={0.2}>
             <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-bold tracking-tighter leading-[0.9]">
-              <span className="block text-zinc-100">Mehrab</span>
-              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 pb-2">
+              <span className=" text-zinc-100">Mehrab </span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 pb-2">
                 Hossain <span className="sr-only">Jim - devmehrab</span>
               </span>
             </h1>
           </Reveal>
 
-          {/* SEO Tactic 3: Localized Subheadline */}
+          {/* SEO Tactic 3: Localized Subheadline (Removed left border, centered) */}
           <Reveal delay={0.3}>
-            <div className="pl-4 border-l-2 border-cyan-500/50 max-w-xl">
-              <h2 className="text-xl sm:text-2xl font-medium text-zinc-300 mb-2">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-xl sm:text-2xl font-medium text-zinc-300 mb-4">
                 Best Next.js Developer in Dhaka
               </h2>
               <p className="text-zinc-500 text-base sm:text-lg leading-relaxed">
-                I am{" "}
-                <span className="text-zinc-300 font-semibold">
-                  Mehrab Hossain
-                </span>
-                , a Junior Full-Stack Engineer at{" "}
-                <span className="text-zinc-300">iMS Technologies</span> studying
-                CSE at <span className="text-cyan-400 font-mono">BUP</span>. I
-                specialize in building high-performance{" "}
-                <span className="text-zinc-300">MERN & Next.js</span>{" "}
-                applications with a focus on SEO and scalability.
+                I am Mehrab Hossain , a Junior Full-Stack Engineer at iMS
+                Technologies, studying CSE at BUP. I specialize in building
+                high-performance MERN & Next.js applications with a focus on SEO
+                and scalability.
               </p>
             </div>
           </Reveal>
 
+          {/* Buttons: Centered using justify-center */}
           <Reveal delay={0.4}>
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <a
                 href="#projects"
                 aria-label="View Mehrab Hossain's Full-Stack Projects"
@@ -85,10 +83,11 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        {/* SEO Tactic 4: Descriptive Tooling */}
-        <div className="lg:col-span-5 hidden lg:flex relative w-full h-min justify-end items-center">
+        {/* SEO Tactic 4: Descriptive Tooling Card 
+            (Removed 'hidden lg:flex', centered it below the buttons with 'mt-16') */}
+        <div className="w-full hidden justify-center mt-16 lg:mt-24">
           <Reveal delay={0.5}>
-            <div className="relative w-full max-w-md  rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl p-8 flex flex-col justify-between shadow-2xl overflow-hidden group">
+            <div className="relative w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl p-8 flex flex-col justify-between shadow-2xl overflow-hidden group text-left">
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/20 blur-[50px] rounded-full group-hover:bg-cyan-400/30 transition-colors duration-500" />
 
               <div className="relative z-10 flex justify-between items-center">

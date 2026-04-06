@@ -1,0 +1,46 @@
+---
+title: "Next.js App Router Performance Guide 2026"
+description: "How to achieve a perfect 100 Lighthouse score using SSG, MDX, and native Next.js optimizations."
+publishedAt: "2026-04-06"
+updatedAt: "2026-04-06"
+tags: ["Next.js", "Performance", "SEO"]
+---
+
+## The Speed Problem
+
+When building my portfolio, I saw a big problem. Normal blogs that use large databases are too slow.
+
+Today, people do not like to wait. Google knows this. Google's search algorithm demands very fast load times. If your website takes more than 2 seconds to load, Google will not put you at the top of the search results.
+
+To win in SEO, you need a perfect 100 score on Google Lighthouse. Here is how I did it using Next.js App Router in 2026.
+
+### 1. Why I Use MDX
+
+Most blogs ask a database for text every time a user visits. This takes time.
+
+I use MDX instead. MDX is a simple way to write text. Because it lives inside my code, Next.js changes my text into pure HTML. Look at this speed! There is no database. There is no waiting. The server just gives the user the HTML file instantly.
+
+### 2. Static Site Generation (SSG)
+
+The biggest secret to a 100 Lighthouse score is SSG (Static Site Generation).
+
+What does this mean? It means Next.js builds all my blog pages _before_ the user even asks for them.
+When I push my code to the internet, Next.js does all the hard work. When you click on this article, the page is already finished and waiting for you. It loads in one millisecond.
+
+### 3. Smart Images and Fonts
+
+Big pictures make websites very slow. Next.js has a great tool called `next/image`.
+
+I do not have to worry about picture sizes. Next.js automatically makes my pictures smaller. It also uses "lazy loading." This means the picture only loads when you scroll down to see it.
+
+I also use `next/font`. It puts the fonts directly into the website code. The text appears right away, and the page never jumps around.
+
+### Conclusion
+
+You do not need a complex system to build a fast website. Keep it simple.
+
+1. Use Next.js App Router.
+2. Write your posts in MDX.
+3. Let Next.js build static pages.
+
+If you do these three things, you will get a 100 Lighthouse score. Your users will be happy, and Google will put your website at the top.

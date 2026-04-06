@@ -7,9 +7,6 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full bg-zinc-950 pt-20 pb-6 overflow-hidden border-t border-zinc-900">
-      {/* Fade-out Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:linear-gradient(to_bottom,white,transparent)] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Top Section: System Info & Socials */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">

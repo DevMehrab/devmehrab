@@ -1,5 +1,6 @@
-import type { Metadata, Viewport } from "next"; // Added Viewport
+import type { Metadata, Viewport } from "next";
 import { Outfit, Fira_Code } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar";
@@ -21,7 +22,6 @@ const firaCode = Fira_Code({
 
 const siteUrl = "https://devmehrab.com";
 
-// Viewport is now a separate export in Next.js 14+
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
   width: "device-width",
@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mehrab Hossain | Best Next.js Developer in Dhaka", // Keyword in the main title
+    default: "Mehrab Hossain | Best Next.js Developer in Dhaka",
     template: "%s | Mehrab Hossain",
   },
   description:
@@ -45,11 +45,14 @@ export const metadata: Metadata = {
     "Next.js Dhaka",
   ],
   alternates: {
-    canonical: siteUrl, // CRITICAL: Tells Google this is the "official" version
+    canonical: siteUrl,
   },
   authors: [{ name: "Mehrab Hossain", url: siteUrl }],
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
@@ -83,7 +86,7 @@ export default function RootLayout({
     name: "Mehrab Hossain",
     alternateName: "devmehrab",
     url: siteUrl,
-    image: `${siteUrl}/my-profile-photo.png`, // Link to your face photo
+    image: `${siteUrl}/my-profile-photo.png`,
     jobTitle: "Full-Stack Developer",
     address: {
       "@type": "PostalAddress",
@@ -113,6 +116,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${firaCode.variable} font-sans bg-[#0a0a0a] text-zinc-400 antialiased`}
       >
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="4b8d7ecd-4782-4cc9-b668-c492f20dc407"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
