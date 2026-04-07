@@ -42,7 +42,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-32 w-full bg-zinc-950 overflow-hidden"
+      className="relative py-12 md:py-32 w-full bg-zinc-950 overflow-hidden"
     >
       {/* Background Ambience */}
       <div className="absolute top-1/2 right-[-10%] w-[600px] h-[600px] bg-cyan-500/5 blur-[150px] rounded-full pointer-events-none" />
@@ -53,7 +53,7 @@ export default function Projects() {
           <Reveal delay={0.1}>
             <div className="flex items-center gap-4 lg:flex-col lg:h-full lg:justify-start">
               <span className="text-cyan-500 font-mono text-sm">02.</span>
-              <div className="h-[1px] w-12 lg:w-[1px] lg:h-24 bg-zinc-800" />
+              <div className="h-[1px] hidden md:block w-12 lg:w-[1px] lg:h-24 bg-zinc-800" />
               <h2 className="text-3xl lg:text-4xl font-bold text-zinc-100 tracking-widest uppercase lg:-rotate-180 lg:[writing-mode:vertical-rl] whitespace-nowrap">
                 Projects
               </h2>

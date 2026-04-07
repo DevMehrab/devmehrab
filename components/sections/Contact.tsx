@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-32 w-full bg-zinc-950 overflow-hidden"
+      className="relative py-12 md:py-32 w-full bg-zinc-950 overflow-hidden"
     >
       {/* Background Ambience */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/1 blur-[150px] rounded-t-full pointer-events-none" />
@@ -65,7 +65,7 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <div className="flex items-center gap-4 lg:flex-col lg:h-full lg:justify-start">
               <span className="text-cyan-500 font-mono text-sm">03.</span>
-              <div className="h-[1px] w-12 lg:w-[1px] lg:h-24 bg-zinc-800" />
+              <div className="h-[1px] hidden md:block w-12 lg:w-[1px] lg:h-24 bg-zinc-800" />
               <h2 className="text-3xl lg:text-4xl font-bold text-zinc-100 tracking-widest uppercase lg:-rotate-180 lg:[writing-mode:vertical-rl] whitespace-nowrap">
                 Network
               </h2>

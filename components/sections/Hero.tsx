@@ -45,12 +45,12 @@ export default function Hero() {
           <Reveal delay={0.3}>
             <div className="max-w-2xl mx-auto">
               <h2 className="text-xl sm:text-2xl font-medium text-zinc-300 mb-4">
-                Best Next.js Developer in Dhaka
+                Full Stack Developer
               </h2>
               <p className="text-zinc-500 text-base sm:text-lg leading-relaxed">
                 I am Mehrab Hossain , a Junior Full-Stack Engineer at iMS
                 Technologies, studying CSE at BUP. I specialize in building
-                high-performance MERN & Next.js applications with a focus on SEO
+                high-performance Next.js & MERN applications with a focus on SEO
                 and scalability.
               </p>
             </div>

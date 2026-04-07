@@ -7,6 +7,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import CustomCursor from "@/components/ui/CustomCursor";
+import FloatingChatToggle from "@/components/ui/FloatingChatToggle";
 
 const inter = Outfit({
   subsets: ["latin"],
@@ -125,10 +126,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Make sure these UI components internally use "use client" if they need it */}
         <CustomCursor />
         <SmoothScroll />
         <Navbar />
+
         <main className="relative flex flex-col min-h-screen">{children}</main>
+
+        {/* Here is our new separated client component */}
+        <FloatingChatToggle />
+
         <Footer />
       </body>
     </html>

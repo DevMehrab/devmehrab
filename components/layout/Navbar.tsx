@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowDownToLine, TerminalSquare, Github } from "lucide-react";
 
 const navLinks = [
-  { name: "Background", href: "#about", num: "01" },
-  { name: "Projects", href: "#projects", num: "02" },
-  { name: "Network", href: "#contact", num: "03" },
+  { name: "Background", href: "/#about", num: "01" },
+  { name: "Projects", href: "/#projects", num: "02" },
+  { name: "Network", href: "/#contact", num: "03" },
   { name: "Blog", href: "/blog", num: "04" },
 ];
 
@@ -51,7 +51,7 @@ export default function Navbar() {
         >
           {/* Logo / System ID */}
           <a
-            href="#"
+            href="/"
             className="group flex items-center gap-3 px-2 transition-opacity hover:opacity-80"
           >
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-cyan-500/50 transition-colors">

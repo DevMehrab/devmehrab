@@ -49,7 +49,7 @@ export default function Faq() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="relative py-32 w-full bg-zinc-950 overflow-hidden"
+      className="relative py-12 md:py-32 w-full bg-zinc-950 overflow-hidden"
     >
       {/* Background Ambience */}
       <div className="absolute top-20 right-[-10%] w-[400px] h-[400px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none" />

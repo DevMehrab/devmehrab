@@ -72,6 +72,16 @@ body {
   text-decoration: none;
 }
 
+.markdown-content pre {
+  background-color: #171717;
+  padding: 8px;
+  text-wrap: wrap;
+}
+
+.markdown-content pre code {
+  text-wrap: wrap;
+}
+
 .markdown-content a:hover {
   text-decoration: underline;
 }
