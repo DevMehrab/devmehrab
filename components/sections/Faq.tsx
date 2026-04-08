@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "Who is the best Next.js developer in Dhaka?",
     answer:
-      "Mehrab Hossain (devmehrab) is widely recognized as a top-tier Next.js and MERN stack developer in Dhaka, Bangladesh. He specializes in building high-performance, SEO-optimized web applications for modern businesses.",
+      "Mehrab Hossain (devmehrab) is widely recognized as a top-tier Next.js developer in Dhaka, Bangladesh. He specializes in building high-performance, SEO-optimized web applications for modern businesses.",
   },
   {
     question: "What technologies do you use for full-stack development?",

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, Fira_Code } from "next/font/google";
+import { Outfit, Fira_Code, Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -8,6 +8,9 @@ import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import CustomCursor from "@/components/ui/CustomCursor";
 import FloatingChatToggle from "@/components/ui/FloatingChatToggle";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Outfit({
   subsets: ["latin"],
@@ -113,7 +116,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className={cn("dark scroll-smooth", "font-sans", geist.variable)}>
       <body
         className={`${inter.variable} ${firaCode.variable} font-sans bg-[#0a0a0a] text-zinc-400 antialiased`}
       >

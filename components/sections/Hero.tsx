@@ -48,7 +48,7 @@ export default function Hero() {
                 Full Stack Developer
               </h2>
               <p className="text-zinc-500 text-base sm:text-lg leading-relaxed">
-                I am Mehrab Hossain , a Junior Full-Stack Engineer at iMS
+                I am Mehrab Hossain , a Junior Full-Stack Developer at iMS
                 Technologies, studying CSE at BUP. I specialize in building
                 high-performance Next.js & MERN applications with a focus on SEO
                 and scalability.
@@ -72,9 +72,9 @@ export default function Hero() {
               </a>
 
               <a
-                href="/CV-Mehrab_Hossain.pdf"
-                download="CV-Mehrab_Hossain.pdf"
-                title="Download Mehrab Hossain's CV"
+                href="/Resume Mehrab Hossain.pdf"
+                download="Resume Mehrab Hossain.pdf"
+                title="Download Mehrab Hossain's Resume"
                 className="px-8 py-4 text-zinc-400 font-mono text-sm rounded-lg border border-zinc-800 hover:text-cyan-400 hover:bg-zinc-900 hover:border-cyan-400/30 transition-all inline-block"
               >
                 &lt;Download Resume /&gt;

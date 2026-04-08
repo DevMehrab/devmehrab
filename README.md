@@ -1,10 +1,10 @@
 # `// MEHRAB HOSSAIN`
 
-**Junior Full-Stack Developer** > Building digital experiences. Engineering with MERN & Next.js. Currently @ iMS Technologies.
+**Junior Full-Stack Developer** > Building digital experiences. Developing with MERN & Next.js. Currently @ iMS Technologies.
 
 ---
 
-### `>_ EXECUTION_CONTEXT`
+### `>_ ABOUT ME`
 
 I am a CSE student at **BUP** and a Full-Stack Developer currently deploying code at **iMS Technologies**. I love bridging the gap between technical logic and seamless user experiences, focusing primarily on the modern JavaScript ecosystem.
 
@@ -13,7 +13,7 @@ I am a CSE student at **BUP** and a Full-Stack Developer currently deploying cod
 
 ---
 
-### `>_ SYSTEM_DEPENDENCIES`
+### `>_ MY TECH STACK`
 
 **Frontend Architecture:**
 Next.js | React | TypeScript | Tailwind CSS

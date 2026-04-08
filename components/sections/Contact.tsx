@@ -67,7 +67,7 @@ export default function Contact() {
               <span className="text-cyan-500 font-mono text-sm">03.</span>
               <div className="h-[1px] hidden md:block w-12 lg:w-[1px] lg:h-24 bg-zinc-800" />
               <h2 className="text-3xl lg:text-4xl font-bold text-zinc-100 tracking-widest uppercase lg:-rotate-180 lg:[writing-mode:vertical-rl] whitespace-nowrap">
-                Network
+                Contact
               </h2>
             </div>
           </Reveal>
@@ -147,7 +147,7 @@ export default function Contact() {
                       htmlFor="message"
                       className="font-mono text-xs text-zinc-400 pl-1"
                     >
-                      Payload_
+                      Message_
                     </label>
                     <textarea
                       name="message"
