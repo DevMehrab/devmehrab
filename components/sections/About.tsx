@@ -1,5 +1,3 @@
-"use client";
-
 import Reveal from "@/components/ui/Reveal";
 import {
   Briefcase,
@@ -26,11 +24,9 @@ export default function About() {
       id="about"
       className="relative py-12 md:py-32 w-full bg-zinc-950 overflow-hidden"
     >
-      {/* Background Ambience */}
       <div className="absolute top-40 left-[-10%] w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row gap-12 lg:gap-20">
-        {/* ================= LEFT: VERTICAL HEADER ================= */}
         <div className="lg:w-24 flex-shrink-0">
           <Reveal delay={0.1}>
             <div className="flex items-center gap-4 lg:flex-col lg:h-full lg:justify-start">
@@ -43,9 +39,7 @@ export default function About() {
           </Reveal>
         </div>
 
-        {/* ================= RIGHT: CONTENT GRID ================= */}
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-          {/* --- Narrative & Timeline (Spans 7 columns) --- */}
           <div className="lg:col-span-7 space-y-16">
             <Reveal delay={0.2}>
               <div className="relative">
@@ -63,13 +57,10 @@ export default function About() {
               </div>
             </Reveal>
 
-            {/* Timeline Section */}
             <Reveal delay={0.3}>
               <div className="relative pl-6 sm:pl-8 border-l border-zinc-800/60 space-y-12">
-                {/* Glowing dot at the top of the timeline */}
                 <div className="absolute top-1 -left-[2px] w-[3px] h-24 bg-gradient-to-b from-cyan-500 to-transparent" />
 
-                {/* Experience Node */}
                 <div className="relative group">
                   <div className="absolute -left-[40px] sm:-left-[48px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-cyan-500/50 transition-colors">
                     <Briefcase className="w-4 h-4 text-cyan-400" />
@@ -92,7 +83,6 @@ export default function About() {
                   </p>
                 </div>
 
-                {/* Education Node */}
                 <div className="relative group">
                   <div className="absolute -left-[40px] sm:-left-[48px] p-2 bg-zinc-950 border border-zinc-800 rounded-full group-hover:border-emerald-500/50 transition-colors">
                     <GraduationCap className="w-4 h-4 text-emerald-400" />
@@ -118,11 +108,9 @@ export default function About() {
             </Reveal>
           </div>
 
-          {/* --- Tech Stack Matrix (Spans 5 columns) --- */}
           <div className="lg:col-span-5">
             <Reveal delay={0.4} className="">
               <div className="relative h-full p-8 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 overflow-hidden flex flex-col group">
-                {/* Background Grid Pattern inside card */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_14px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_10%,transparent_100%)]" />
 
                 <div className="relative z-10 flex items-center gap-3 mb-8 pb-4 border-b border-zinc-800/50">
@@ -148,7 +136,6 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Decorative Terminal Footer */}
                 <div className="relative z-10 mt-8 pt-4 border-t border-zinc-800/50 flex justify-between items-center font-mono text-[10px] text-zinc-600">
                   <span>// stack_loaded</span>
                   <span className="animate-pulse text-cyan-500/50">100%</span>

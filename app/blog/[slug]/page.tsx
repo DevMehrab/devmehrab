@@ -5,10 +5,8 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-// 1. Define where your content lives
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
-// Helper to get a single post
 function getPost(slug: string) {
   try {
     const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
@@ -17,11 +15,10 @@ function getPost(slug: string) {
     const { data, content } = matter(fileContent);
     return { frontmatter: data, content };
   } catch (error) {
-    return null; // Triggers a 404 if the URL is wrong
+    return null;
   }
 }
 
-// 2. FORCE STATIC SITE GENERATION
 export async function generateStaticParams() {
   const files = fs.readdirSync(BLOG_DIR);
   return files.map((filename) => ({
@@ -29,13 +26,12 @@ export async function generateStaticParams() {
   }));
 }
 
-// 3. DYNAMIC METADATA (FIXED FOR NEXT.JS 15)
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>; // <-- 1. Change to Promise
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params; // <-- 2. Await the params here
+  const { slug } = await params;
 
   const post = getPost(slug);
   if (!post) return {};
@@ -67,13 +63,12 @@ export async function generateMetadata({
   };
 }
 
-// 4. THE PAGE COMPONENT & JSON-LD INJECTION (FIXED FOR NEXT.JS 15)
 export default async function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }>; // <-- 3. Change to Promise
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // <-- 4. Await the params here
+  const { slug } = await params;
 
   const post = getPost(slug);
 
@@ -83,7 +78,6 @@ export default async function BlogPost({
 
   const { frontmatter, content } = post;
 
-  // The Invisible SEO Schema
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -105,13 +99,11 @@ export default async function BlogPost({
 
   return (
     <article className="max-w-3xl mx-auto px-6 py-32 w-full">
-      {/* Inject Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Post Header */}
       <header className="mb-12 border-b border-zinc-800 pb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 leading-normal md:leading-18 mb-4">
           {frontmatter.title}
@@ -129,7 +121,6 @@ export default async function BlogPost({
         </div>
       </header>
 
-      {/* Post Content rendered by MDX */}
       <div className="markdown-content">
         <MDXRemote source={content} />
       </div>

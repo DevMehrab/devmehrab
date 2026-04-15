@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { TerminalSquare, FolderGit2, Calendar, ArrowRight } from "lucide-react";
 
-// 1. STATIC METADATA (The Hub Identity)
 export const metadata: Metadata = {
   title: "Engineering Blog & Tutorials | Mehrab Hossain",
   description:
@@ -21,7 +20,6 @@ export const metadata: Metadata = {
   },
 };
 
-// 2. DATA FETCHING (Build-time MDX Parsing)
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
 function getAllPosts() {
@@ -34,7 +32,6 @@ function getAllPosts() {
     return { slug, frontmatter: data };
   });
 
-  // Sort chronologically (newest first)
   return posts.sort(
     (a, b) =>
       new Date(b.frontmatter.publishedAt).getTime() -
@@ -42,17 +39,13 @@ function getAllPosts() {
   );
 }
 
-// 3. THE PAGE COMPONENT
 export default function BlogHub() {
   const posts = getAllPosts();
 
-  // Extract unique tags to build the "Clusters"
   const allTags = Array.from(
     new Set(posts.flatMap((post) => post.frontmatter.tags || [])),
   ).sort();
 
-  // 4. THE INVISIBLE SEO: ItemList Schema
-  // Tells Google this page is a curated list of articles
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -66,14 +59,12 @@ export default function BlogHub() {
 
   return (
     <section className="relative py-32 w-full bg-zinc-950 min-h-screen">
-      {/* Schema Injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <div className="max-w-5xl mx-auto px-6 w-full">
-        {/* Hub Header */}
         <header className="mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-zinc-900/50 border border-zinc-800">
             <TerminalSquare className="w-4 h-4 text-cyan-400" />
@@ -91,7 +82,6 @@ export default function BlogHub() {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* LEFT COLUMN: The Chronological Feed (For Freshness) */}
           <div className="lg:col-span-8 space-y-8">
             <h2 className="text-2xl font-bold text-zinc-100 flex items-center gap-3 mb-8 border-b border-zinc-800 pb-4">
               <Calendar className="w-6 h-6 text-zinc-500" />
@@ -151,7 +141,6 @@ export default function BlogHub() {
             ))}
           </div>
 
-          {/* RIGHT COLUMN: The Topical Clusters (For Authority) */}
           <aside className="lg:col-span-4 mt-0 md:mt-20">
             <div className="sticky top-32 p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800">
               <h2 className="text-xl font-bold text-zinc-100 flex items-center gap-3 mb-6">
@@ -161,7 +150,6 @@ export default function BlogHub() {
 
               <div className="flex flex-col gap-2">
                 {allTags.map((tag) => {
-                  // Count how many posts have this tag
                   const count = posts.filter((p) =>
                     p.frontmatter.tags?.includes(tag),
                   ).length;

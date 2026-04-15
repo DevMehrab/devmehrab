@@ -10,11 +10,11 @@ import CustomCursor from "@/components/ui/CustomCursor";
 import FloatingChatToggle from "@/components/ui/FloatingChatToggle";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
-const inter = Outfit({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -116,10 +116,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={cn("dark scroll-smooth", "font-sans", geist.variable)}>
-      <body
-        className={`${inter.variable} ${firaCode.variable} font-sans bg-[#0a0a0a] text-zinc-400 antialiased`}
-      >
+    <html
+      lang="en"
+      className={cn("dark scroll-smooth", outfit.variable, firaCode.variable)}
+    >
+      <body className="font-sans bg-[#0a0a0a] text-zinc-400 antialiased min-h-screen flex flex-col">
         <Script
           src="https://cloud.umami.is/script.js"
           data-website-id="4b8d7ecd-4782-4cc9-b668-c492f20dc407"

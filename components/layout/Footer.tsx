@@ -1,5 +1,3 @@
-"use client";
-
 import { Github, Linkedin, Twitter, Activity, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -8,9 +6,7 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-zinc-950 pt-20 pb-6 overflow-hidden border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Top Section: System Info & Socials */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
-          {/* Left: Status & Location */}
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-6 font-mono text-xs text-zinc-500">
               <div className="flex items-center gap-2">
@@ -30,7 +26,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right: Network Links */}
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/DevMehrab"
@@ -53,7 +48,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section: Massive Typographic Anchor */}
         <div className="w-full overflow-hidden select-none pointer-events-none border-t border-zinc-900 pt-8">
           <h2 className="text-[15vw] leading-[0.75] font-bold text-transparent bg-clip-text bg-gradient-to-b from-zinc-800/80 to-zinc-950 text-center tracking-tighter">
             MEHRAB

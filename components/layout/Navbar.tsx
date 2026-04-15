@@ -1,41 +1,25 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowDownToLine, TerminalSquare, Github } from "lucide-react";
-
-const navLinks = [
-  { name: "Background", href: "/#about", num: "01" },
-  { name: "Projects", href: "/#projects", num: "02" },
-  { name: "Contact", href: "/#contact", num: "03" },
-  { name: "Blog", href: "/blog", num: "04" },
-];
+import { useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Menu, X, TerminalSquare, Github } from "lucide-react";
+import { navLinks } from "@/config/nav";
+import MobileMenu from "../navbar/MobileMenu";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Shrink/Adjust on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const shouldBeScrolled = latest > 50;
+    if (isScrolled !== shouldBeScrolled) {
+      setIsScrolled(shouldBeScrolled);
     }
-  }, [mobileMenuOpen]);
+  });
 
   return (
     <>
-      {/* ================= DESKTOP & MOBILE COMMAND BAR ================= */}
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -49,7 +33,6 @@ export default function Navbar() {
               : "w-full max-w-7xl bg-transparent py-4 px-2 rounded-none border-transparent"
           }`}
         >
-          {/* Logo / System ID */}
           <a
             href="/"
             className="group flex items-center gap-3 px-2 transition-opacity hover:opacity-80"
@@ -59,7 +42,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col hidden sm:flex">
               <span className="font-mono text-xs font-bold text-zinc-100 tracking-wider">
-                M.HOSSAIN
+                MEHRAB HOSSAIN
               </span>
               <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest">
                 DEVMEHRAB
@@ -67,7 +50,6 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop Links (Floating Pill) */}
           <div className="hidden md:flex items-center gap-1 p-1 bg-zinc-900/50 border border-zinc-800/50 rounded-lg backdrop-blur-md">
             {navLinks.map((link) => (
               <a
@@ -84,7 +66,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Resume Action */}
           <div className="hidden md:flex items-center">
             <a
               href="https://github.com/DevMehrab"
@@ -97,65 +78,20 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div
+          <button
+            aria-label="Toggle Navigation Menu"
             className="md:hidden relative z-50 p-2 text-zinc-400 hover:text-cyan-400 transition-colors bg-zinc-900/50 border border-zinc-800/50 rounded-lg"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </div>
+          </button>
         </div>
       </motion.nav>
 
-      {/* ================= MOBILE FULLSCREEN OVERLAY ================= */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col justify-center px-6 bg-zinc-950/95 backdrop-blur-2xl"
-          >
-            {/* Ambient Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none" />
-
-            <div className="relative z-10 flex flex-col gap-8">
-              {navLinks.map((link, i) => (
-                <motion.a
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * i + 0.1 }}
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="group flex flex-col border-b border-zinc-800 pb-4"
-                >
-                  <span className="font-mono text-sm text-cyan-500 mb-2">
-                    {link.num} //
-                  </span>
-                  <span className="text-4xl font-bold text-zinc-300 group-hover:text-cyan-400 group-hover:translate-x-2 transition-all duration-300">
-                    {link.name}
-                  </span>
-                </motion.a>
-              ))}
-
-              <motion.a
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                href="https://github.com/DevMehrab"
-                target="_blank"
-                onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center gap-3 w-full py-4 mt-8 bg-zinc-100 text-zinc-950 font-bold rounded-xl"
-              >
-                <Github className="w-5 h-5" />
-                View Github
-              </motion.a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+      />
     </>
   );
 }

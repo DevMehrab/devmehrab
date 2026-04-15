@@ -1,5 +1,3 @@
-"use client";
-
 import Reveal from "@/components/ui/Reveal";
 import { ArrowRight, Terminal, Database, Code2 } from "lucide-react";
 
@@ -10,15 +8,11 @@ export default function Hero() {
       aria-label="Mehrab Hossain - Full-Stack Developer Hero Section"
       className="relative min-h-screen flex flex-col justify-center w-full overflow-hidden bg-zinc-950"
     >
-      {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-[-20%] w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-      {/* Main Container: Switched from Grid to Flex Column Center */}
       <div className="max-w-7xl mx-auto px-6 w-full z-10 flex flex-col items-center justify-center pt-20 lg:pt-0">
-        {/* Text Section: Centered items and text */}
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl">
-          {/* SEO Tactic 1: Semantic Badge */}
           <Reveal delay={0.1}>
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
               <span className="relative flex h-2.5 w-2.5">
@@ -31,7 +25,6 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          {/* SEO Tactic 2: Keyword-Rich H1 */}
           <Reveal delay={0.2}>
             <h1 className="text-6xl sm:text-8xl lg:text-[7rem] font-bold tracking-tighter leading-[0.9]">
               <span className=" text-zinc-100">Mehrab </span>
@@ -41,7 +34,6 @@ export default function Hero() {
             </h1>
           </Reveal>
 
-          {/* SEO Tactic 3: Localized Subheadline (Removed left border, centered) */}
           <Reveal delay={0.3}>
             <div className="max-w-2xl mx-auto">
               <h2 className="text-xl sm:text-2xl font-medium text-zinc-300 mb-4">
@@ -56,7 +48,6 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          {/* Buttons: Centered using justify-center */}
           <Reveal delay={0.4}>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <a
@@ -83,8 +74,6 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        {/* SEO Tactic 4: Descriptive Tooling Card 
-            (Removed 'hidden lg:flex', centered it below the buttons with 'mt-16') */}
         <div className="w-full hidden justify-center mt-16 lg:mt-24">
           <Reveal delay={0.5}>
             <div className="relative w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl p-8 flex flex-col justify-between shadow-2xl overflow-hidden group text-left">

@@ -1,0 +1,68 @@
+---
+title: "Easy Guide to Next.js: CSR, SSR, SSG, and ISR"
+description: "Learn the four main ways to render content in Next.js to boost your site speed and SEO."
+publishedAt: "2026-04-15"
+updatedAt: "2026-04-15"
+tags: ["Next.js", "Web Development", "Learning", "Rendering"]
+---
+
+# Understanding Next.js: CSR, SSR, SSG, and ISR
+
+When you build a website with Next.js, you have four main ways to show your content. Each way is good for different things. Let’s learn how they work in simple English.
+
+## 1. CSR (Client-Side Rendering)
+
+CSR means the "Client" (your web browser) does the work. When you visit the site, the server sends a simple page with a lot of JavaScript code. Your browser then runs this code to show the content.
+
+- **When to use it:** For private dashboards or pages where you don't need SEO (Search Engine Optimization).
+- **Pros:** Fast after the first load.
+- **Cons:** The first load can be slow because the browser has to download a lot of code.
+
+## 2. SSR (Server-Side Rendering)
+
+With SSR, the "Server" does the work every time a user clicks a link. The server prepares the HTML page and sends it to your browser.
+
+- **When to use it:** For pages with data that changes all the time, like a "Live News" feed.
+- **Pros:** Better for SEO and good for slow phones.
+- **Cons:** The server works hard, so it might take a moment to start the page.
+
+## 3. SSG (Static Site Generation)
+
+SSG is very fast. Next.js creates the HTML pages one time when you "build" your project (before the site goes live). The server just sends the ready file to the user.
+
+- **When to use it:** For blogs, help pages, or marketing sites.
+- **Pros:** Extremely fast and gets a perfect 100 Lighthouse score.
+- **Cons:** If you change your content, you must build the whole site again.
+
+## 4. ISR (Incremental Static Regeneration)
+
+ISR is like a mix of SSG and SSR. It creates static pages, but it can update them in the background after the site is live. You can tell Next.js to check for new data every 60 seconds, for example.
+
+- **When to use it:** For large shops or big blogs where you want speed but also fresh data.
+- **Pros:** Fast like SSG, but you don't need to rebuild the whole site to update one page.
+
+## Quick Comparison
+
+**CSR (Client-Side Rendering)**
+
+- Speed: Medium
+- Fresh Data: High
+- Good for SEO: No
+
+**SSR (Server-Side Rendering)**
+
+- Speed: Medium
+- Fresh Data: High
+- Good for SEO: Yes
+
+**SSG (Static Site Generation)**
+
+- Speed: Very Fast
+- Fresh Data: Low
+- Good for SEO: Yes
+
+**ISR (Incremental Static Regeneration)**
+
+- Speed: Very Fast
+- Fresh Data: High
+- Good for SEO: Yes
